@@ -1,0 +1,21 @@
+﻿
+@*     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860 *@
+
+@* @model List<Actor>; *@
+@* @{ *@
+@*     <ul> *@
+
+@*         @foreach(var actor in Model) *@
+@*         { *@
+@*             <li> *@
+@*             <strong>@actor.name</strong> - chiều cao: @actor.height - Vai diễn: *@
+@*             @if(@actor.height >= 160) *@
+@*             { *@
+@*                 <strong>@actor.Role</strong> *@
+@*             }else{ *@
+@*                 <strong>@actor.Role (diễn viên bị suy dinh dưỡng)</strong> *@
+@*             } *@
+@*             / *@
+@*         } *@
+@*     </ul> *@
+@* } *@

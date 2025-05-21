@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\LTWEB_buoi4.props" />
+</Project>
