@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\VoNguyenMinhNhat_LTWEB_buoi3.props" />
-</Project>
