@@ -1,0 +1,100 @@
+﻿@page
+@model VoNguyenMinhNhat_LTWEB_buoi3.Areas.Identity.Pages.Account.LoginModel
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<!-- Bootstrap 5 CDN, chỉ thêm nếu chưa có trong _Layout.cshtml -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+<style>
+    body {
+        background: #fff;
+        min-height: 100vh;
+    }
+
+    .card {
+        border-radius: 1.5rem;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    }
+
+    .form-floating > .form-control:focus ~ label {
+        color: #0d6efd;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+            <div class="card p-4">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">
+                        <i class="bi bi-box-arrow-in-right me-2"></i>
+                        @ViewData["Title"]
+                    </h2>
+                    <form id="account" method="post" autocomplete="off">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                            <label asp-for="Input.Email"><i class="bi bi-envelope"></i> Email</label>
+                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Password" type="password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
+                            <label asp-for="Input.Password"><i class="bi bi-lock"></i> Password</label>
+                            <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" asp-for="Input.RememberMe" id="rememberMeCheck" />
+                            <label class="form-check-label" for="rememberMeCheck">
+                                @Html.DisplayNameFor(m => m.Input.RememberMe)
+                            </label>
+                        </div>
+                        <button id="login-submit" type="submit" class="btn btn-primary w-100 mb-2">
+                            <i class="bi bi-box-arrow-in-right"></i> Log in
+                        </button>
+                        <div class="d-flex flex-column align-items-center mt-2">
+                            <a id="forgot-password" asp-page="./ForgotPassword" class="small mb-1">Forgot your password?</a>
+                            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="small mb-1">Register as a new user</a>
+                            <a id="resend-confirmation" asp-page="./ResendEmailConfirmation" class="small">Resend email confirmation</a>
+                        </div>
+                    </form>
+                    <hr class="my-4" />
+                    <div>
+                        <h5 class="text-center mb-3">Or log in with</h5>
+                        @{
+                            if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                            {
+                                <div class="alert alert-warning text-center">
+                                    <i class="bi bi-exclamation-circle"></i>
+                                    There are no external authentication services configured.<br />
+                                    <a href="https://go.microsoft.com/fwlink/?LinkID=532715" target="_blank" class="link-primary text-decoration-underline">
+                                        Learn how to add external login
+                                    </a>.
+                                </div>
+                            }
+                            else
+                            {
+                                <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="text-center">
+                                    @foreach (var provider in Model.ExternalLogins!)
+                                    {
+                                        <button type="submit" class="btn btn-outline-dark me-2 mb-2" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
+                                            <i class="bi bi-box-arrow-in-right"></i> @provider.DisplayName
+                                        </button>
+                                    }
+                                </form>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <!-- Bootstrap JS Bundle (only if you don't already have it in your layout) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+}
