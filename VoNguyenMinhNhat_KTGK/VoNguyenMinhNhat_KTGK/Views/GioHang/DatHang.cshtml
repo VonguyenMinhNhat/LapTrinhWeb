@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Xác nhận đăng ký";
+    var sinhVien = ViewBag.SinhVien as VoNguyenMinhNhat_KTGK.Models.SinhVien;
+    var danhSachHP = ViewBag.DanhSachHP as List<VoNguyenMinhNhat_KTGK.Models.HocPhan>;
+}
+
+<h2 class="text-center text-uppercase mb-4">Đăng Kí học phần</h2>
+
+<table class="table table-bordered text-center">
+    <thead class="table-dark">
+        <tr>
+            <th>MaHP</th>
+            <th>Tên Học Phần</th>
+            <th>Số Chỉ Chỉ</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hp in danhSachHP)
+        {
+            <tr>
+                <td>@hp.MaHP</td>
+                <td>@hp.TenHP</td>
+                <td>@hp.SoTinChi</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p class="text-danger"><strong>Số lượng học phần: </strong>@danhSachHP.Count</p>
+<p class="text-danger"><strong>Tổng số tín chỉ: </strong>@danhSachHP.Sum(x => x.SoTinChi)</p>
+
+<hr />
+
+<div class="bg-light p-4 rounded shadow-sm">
+    <h4 class="text-center mb-4">Thông tin Đăng kí</h4>
+    <dl class="row">
+        <dt class="col-sm-3">Mã số sinh viên:</dt>
+        <dd class="col-sm-9 fw-bold text-primary">@sinhVien.MaSV</dd>
+
+        <dt class="col-sm-3">Họ Tên Sinh Viên:</dt>
+        <dd class="col-sm-9 fw-bold">@sinhVien.HoTen</dd>
+
+        <dt class="col-sm-3">Ngày Sinh:</dt>
+        <dd class="col-sm-9">@sinhVien.NgaySinh?.ToShortDateString()</dd>
+
+        <dt class="col-sm-3">Ngành học:</dt>
+        <dd class="col-sm-9">@sinhVien.NganhHoc?.TenNganh</dd>
+
+        <dt class="col-sm-3">Ngày Đăng Ký:</dt>
+        <dd class="col-sm-9">@DateTime.Now.ToShortDateString()</dd>
+    </dl>
+
+    <form asp-action="XacNhanDatHang" method="post" class="text-center mt-4">
+        <a asp-action="GioHang" class="btn btn-secondary me-2">🔙 Trở về giỏ hàng</a>
+        <button type="submit" class="btn btn-success">✅ Xác Nhận</button>
+    </form>
+</div>

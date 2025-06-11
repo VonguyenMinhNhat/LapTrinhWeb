@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\VoNguyenMinhNhat_KTGK.props" />
+</Project>

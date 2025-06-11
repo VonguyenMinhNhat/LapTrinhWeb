@@ -1,0 +1,56 @@
+﻿@model List<VoNguyenMinhNhat_KTGK.Models.SinhVien>
+
+@{
+    ViewData["Title"] = "Danh sách Sinh Viên";
+}
+
+<h2 class="mb-4">Danh sách Sinh Viên</h2>
+
+<p>
+    <a asp-action="Create" asp-controller="SinhViens" class="btn btn-success">
+        ➕ Thêm mới
+    </a>
+</p>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Mã SV</th>
+            <th>Họ Tên</th>
+            <th>Giới Tính</th>
+            <th>Ngày Sinh</th>
+            <th>Hình</th>
+            <th>Ngành</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sv in Model)
+        {
+            <tr>
+                <td>@sv.MaSV</td>
+                <td>@sv.HoTen</td>
+                <td>@sv.GioiTinh</td>
+                <td>@sv.NgaySinh?.ToString("dd/MM/yyyy")</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(sv.Hinh))
+                    {
+                        <img src="@Url.Content(sv.Hinh)" width="80" height="80"
+                             style="object-fit: cover; border: 1px solid #ccc; border-radius: 8px;"
+                             onerror="this.onerror=null; this.src='/images/default.png';" />
+                    }
+                    else
+                    {
+                        <span>Không có ảnh</span>
+                    }
+                </td>
+                <td>@sv.NganhHoc?.TenNganh</td>
+                <td>
+                    <a asp-action="Details" asp-controller="SinhViens" asp-route-id="@sv.MaSV" class="btn btn-sm btn-info">Xem</a>
+                    <a asp-action="Edit" asp-controller="SinhViens" asp-route-id="@sv.MaSV" class="btn btn-sm btn-warning">Sửa</a>
+                    <a asp-action="Delete" asp-controller="SinhViens" asp-route-id="@sv.MaSV" class="btn btn-sm btn-danger">Xoá</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

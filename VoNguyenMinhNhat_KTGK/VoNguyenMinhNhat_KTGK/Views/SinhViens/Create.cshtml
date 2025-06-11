@@ -1,0 +1,66 @@
+﻿@model VoNguyenMinhNhat_KTGK.Models.SinhVien
+
+@{
+    ViewData["Title"] = "Thêm sinh viên";
+}
+
+<h2 class="mb-4">Thêm sinh viên</h2>
+
+<form asp-action="Create" enctype="multipart/form-data" method="post">
+    <div class="form-group mb-2">
+        <label asp-for="MaSV" class="form-label"></label>
+        <input asp-for="MaSV" class="form-control" />
+        <span asp-validation-for="MaSV" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-2">
+        <label asp-for="HoTen" class="form-label"></label>
+        <input asp-for="HoTen" class="form-control" />
+        <span asp-validation-for="HoTen" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-2">
+        <label asp-for="GioiTinh" class="form-label"></label>
+        <input asp-for="GioiTinh" class="form-control" />
+    </div>
+
+    <div class="form-group mb-2">
+        <label asp-for="NgaySinh" class="form-label"></label>
+        <input asp-for="NgaySinh" type="date" class="form-control" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label>Chọn ảnh từ máy:</label>
+        <input type="file" name="ImageFile" class="form-control" accept="image/*" onchange="previewImage(this)" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label>Xem trước ảnh:</label><br />
+        <img id="preview" src="/images/default.png" width="120" style="border:1px solid #ccc; padding:4px; border-radius:6px;" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="MaNganh" class="form-label"></label>
+        <select asp-for="MaNganh" class="form-control" asp-items="ViewBag.MaNganh"></select>
+        <span asp-validation-for="MaNganh" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">💾 Lưu</button>
+    <a asp-action="Index" class="btn btn-secondary">⬅️ Hủy</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        function previewImage(input) {
+            const preview = document.getElementById('preview');
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+}

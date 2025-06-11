@@ -1,0 +1,45 @@
+﻿@model VoNguyenMinhNhat_KTGK.Models.DangNhapViewModel
+@{
+    ViewBag.Title = "Đăng nhập";
+}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card shadow-lg" style="width: 100%; max-width: 420px;">
+        <div class="card-header bg-primary text-white text-center">
+            <h4 class="mb-0">🔐 Đăng Nhập</h4>
+        </div>
+        <div class="card-body">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger mb-3" })
+
+            @if (ViewBag.ThongBao != null)
+            {
+                <div class="alert alert-danger">@ViewBag.ThongBao</div>
+            }
+
+            <form asp-action="DangNhap" method="post">
+                <div class="mb-3">
+                    <label asp-for="MaSV" class="form-label fw-semibold">📘 Mã Sinh Viên</label>
+                    <input asp-for="MaSV" class="form-control" placeholder="Nhập mã sinh viên" />
+                    <span asp-validation-for="MaSV" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="NgaySinh" class="form-label fw-semibold">🎂 Ngày Sinh</label>
+                    <input asp-for="NgaySinh" type="date" class="form-control" />
+                    <span asp-validation-for="NgaySinh" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 fw-bold">
+                    <i class="bi bi-box-arrow-in-right"></i> Đăng nhập
+                </button>
+            </form>
+        </div>
+        <div class="card-footer text-muted text-center small">
+            &copy; 2025 - Hệ thống quản lý học phần
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

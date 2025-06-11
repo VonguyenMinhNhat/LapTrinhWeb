@@ -1,0 +1,23 @@
+﻿@model VoNguyenMinhNhat_KTGK.Models.SinhVien
+
+@{
+    ViewData["Title"] = "Xóa sinh viên";
+}
+
+<h2>Bạn có chắc muốn xóa?</h2>
+
+<div>
+    <h4>Sinh viên: @Model.HoTen (@Model.MaSV)</h4>
+    <dl class="row">
+        <dt class="col-sm-2">Ngành</dt>
+        <dd class="col-sm-10">@Model.NganhHoc?.TenNganh</dd>
+        <dt class="col-sm-2">Ngày sinh</dt>
+        <dd class="col-sm-10">@Model.NgaySinh?.ToString("dd/MM/yyyy")</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="MaSV" />
+        <button type="submit" class="btn btn-danger">🗑️ Xóa</button>
+        <a asp-action="Index" class="btn btn-secondary">⬅️ Hủy</a>
+    </form>
+</div>

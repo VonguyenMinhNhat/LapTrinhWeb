@@ -1,0 +1,33 @@
+﻿@model List<VoNguyenMinhNhat_KTGK.Models.HocPhan>
+
+@{
+    ViewData["Title"] = "Danh sách học phần";
+}
+
+<h2 class="text-center text-uppercase text-primary mt-4 mb-4">📚 DANH SÁCH HỌC PHẦN</h2>
+
+<table class="table table-bordered text-center">
+    <thead class="table-dark">
+        <tr>
+            <th>Mã Học Phần</th>
+            <th>Tên Học Phần</th>
+            <th>Số Tín Chỉ</th>
+            <th>Thao Tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hp in Model)
+        {
+            <tr>
+                <td>@hp.MaHP</td>
+                <td>@hp.TenHP</td>
+                <td>@hp.SoTinChi</td>
+                <td>
+                    <a asp-controller="GioHang" asp-action="Them" asp-route-maHP="@hp.MaHP" class="btn btn-success btn-sm">
+                        Đăng Kí
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

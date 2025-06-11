@@ -1,0 +1,45 @@
+﻿@model VoNguyenMinhNhat_KTGK.Models.SinhVien
+
+@{
+    ViewData["Title"] = "Sửa sinh viên";
+}
+
+<h2>Chỉnh sửa sinh viên</h2>
+
+<form asp-action="Edit" enctype="multipart/form-data">
+    <input type="hidden" asp-for="MaSV" />
+
+    <div class="form-group">
+        <label asp-for="HoTen"></label>
+        <input asp-for="HoTen" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="GioiTinh"></label>
+        <input asp-for="GioiTinh" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NgaySinh"></label>
+        <input asp-for="NgaySinh" type="date" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Chọn ảnh mới:</label>
+        <input type="file" name="ImageFile" class="form-control" />
+        @if (!string.IsNullOrEmpty(Model.Hinh))
+        {
+            <p>Ảnh hiện tại:</p>
+            <img src="@Url.Content(Model.Hinh)" width="100" />
+        }
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MaNganh"></label>
+        <select asp-for="MaNganh" class="form-control" asp-items="ViewBag.MaNganh"></select>
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Lưu</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

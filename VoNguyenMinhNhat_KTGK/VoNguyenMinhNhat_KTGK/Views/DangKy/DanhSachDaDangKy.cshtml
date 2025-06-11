@@ -1,0 +1,44 @@
+﻿@model List<VoNguyenMinhNhat_KTGK.Models.DangKy>
+
+@{
+    ViewData["Title"] = "Danh sách học phần đã đăng ký";
+}
+
+<h2 class="text-success mb-3">📚 Học phần đã đăng ký</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning">Bạn chưa đăng ký học phần nào.</div>
+}
+else
+{
+    @foreach (var dk in Model.OrderByDescending(x => x.NgayDK))
+    {
+        <div class="card mb-3 shadow-sm">
+            <div class="card-header bg-dark text-white">
+                <strong>Ngày đăng ký:</strong> @dk.NgayDK.ToString("dd/MM/yyyy")
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-bordered m-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Mã HP</th>
+                            <th>Tên học phần</th>
+                            <th>Số tín chỉ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var ct in dk.ChiTietDangKys)
+                        {
+                            <tr>
+                                <td>@ct.MaHP</td>
+                                <td>@ct.HocPhan?.TenHP</td>
+                                <td>@ct.HocPhan?.SoTinChi</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+}

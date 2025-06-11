@@ -1,0 +1,101 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = VoNguyenMinhNhat_KTGK
+build_property.RootNamespace = VoNguyenMinhNhat_KTGK
+build_property.ProjectDir = C:\Users\mrnha\source\repos\VoNguyenMinhNhat_KTGK\VoNguyenMinhNhat_KTGK\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\mrnha\source\repos\VoNguyenMinhNhat_KTGK\VoNguyenMinhNhat_KTGK
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/DangKy/DanhSachDaDangKy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuZ0t5XERhbmhTYWNoRGFEYW5nS3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/DangKy/ListHP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuZ0t5XExpc3RIUC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/GioHang/DatHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvSGFuZ1xEYXRIYW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/GioHang/GioHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvSGFuZ1xHaW9IYW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/GioHang/XacNhanDonHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvSGFuZ1xYYWNOaGFuRG9uSGFuZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/SinhViens/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luaFZpZW5zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/SinhViens/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luaFZpZW5zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/SinhViens/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luaFZpZW5zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/SinhViens/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luaFZpZW5zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/SinhViens/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luaFZpZW5zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/TaiKhoan/Dangnhap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFpS2hvYW5cRGFuZ25oYXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mrnha/source/repos/VoNguyenMinhNhat_KTGK/VoNguyenMinhNhat_KTGK/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-5wt3u4xlxb

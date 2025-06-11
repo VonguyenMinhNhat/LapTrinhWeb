@@ -1,0 +1,36 @@
+﻿@model VoNguyenMinhNhat_KTGK.Models.SinhVien
+
+@{
+    ViewData["Title"] = "Chi tiết sinh viên";
+}
+
+<h2>Chi tiết sinh viên</h2>
+
+<div class="card mb-4" style="max-width: 600px;">
+    <div class="card-header bg-primary text-white">
+        <strong>@Model.HoTen (@Model.MaSV)</strong>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-4">Họ tên</dt>
+            <dd class="col-sm-8">@Model.HoTen</dd>
+
+            <dt class="col-sm-4">Giới tính</dt>
+            <dd class="col-sm-8">@Model.GioiTinh</dd>
+
+            <dt class="col-sm-4">Ngày sinh</dt>
+            <dd class="col-sm-8">@Model.NgaySinh?.ToString("dd/MM/yyyy")</dd>
+
+            <dt class="col-sm-4">Ngành học</dt>
+            <dd class="col-sm-8">@Model.NganhHoc?.TenNganh</dd>
+
+            <dt class="col-sm-4">Ảnh</dt>
+            <dd class="col-sm-8">
+                <img src="@Model.Hinh" alt="Hình sinh viên" width="120" />
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.MaSV" class="btn btn-primary">✏️ Sửa</a>
+<a asp-action="Index" class="btn btn-secondary">⬅️ Quay lại danh sách</a>
